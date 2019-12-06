@@ -99,7 +99,7 @@ def from_approximate_size(size: str) :
     raise ValueError('unrecognized unit')
 
 
-def insert_into_file(file: str, num: int, line: str, check_line=False, encoding_='utf-8') -> None :
+def insert_into_file(file: str, num: int, line: str, /, check_line=False, encoding_='utf-8') -> None :
     """Insert a line into a file
 
     If the line number is greater than the total number of lines
@@ -134,7 +134,7 @@ def insert_into_file(file: str, num: int, line: str, check_line=False, encoding_
             fw.write(i)
 
 
-def get_or_update_config(config_file: str, option_name: str, value_=None, encoding_='utf-8') :
+def get_or_update_config(config_file: str, option_name: str, /, value_=None, encoding_='utf-8') :
     """JSON & file based configuration management
 
     params: config_file: configuration file name
