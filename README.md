@@ -8,6 +8,8 @@ Useful tool-kit
 `insert_into_file` positional-only arguments
 
 ## Version 1.2.0
+**Python 3.8 required**
+
 Rename `retrive_or_update_config` to `get_or_update_config`
 
 Add `from_approximate_size` function
