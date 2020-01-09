@@ -97,7 +97,6 @@ def insert_into_file(file: str, num: int, line: str, /, check_line=False, encodi
     is_inserted = False
     with open(file, 'r+', encoding=encoding_) as f, \
             TemporaryFile('w+t', encoding=encoding_) as ft :
-        tmp_file = ft.name
         
         for i, line_ in enumerate(f) :
             # Insert when line number matches
