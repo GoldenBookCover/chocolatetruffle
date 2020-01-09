@@ -3,7 +3,7 @@ Useful tool-kit
 
 # Changelog
 ## Version 1.2.2
-`insert_into_file` updated
+Update `insert_into_file`
 
 ## Version 1.2.1
 `get_or_update_config` positional-only arguments
