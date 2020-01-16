@@ -23,7 +23,7 @@ __all__ = [
     'get_or_update_config',
 ]
 
-from systools import (
+from .systools import (
     safely_get_element,
     approximate_size,
     from_approximate_size,
