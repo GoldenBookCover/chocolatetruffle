@@ -76,7 +76,7 @@ def from_approximate_size(size: str) :
     raise ValueError('unrecognized unit')
 
 
-def insert_into_file(file: str, num: int, line: str, /, check_line=False, encoding_='utf-8') -> None :
+def insert_into_file(file: str, num: int, line: str, /, check_line=False, encoding_='utf-8') -> bool :
     """Insert a line into a file
 
     If the line number is greater than the total number of lines
@@ -89,7 +89,7 @@ def insert_into_file(file: str, num: int, line: str, /, check_line=False, encodi
     :param num: the line number where the line is inserted
     :param line: the string to insert
     :param check_line: allow a greater line number than the total number of lines
-    :return: None
+    :return: is_inserted: boolean
     """
 
     assert (num := int(num)) > 0, 'invalid line number'
