@@ -7,7 +7,7 @@ If you want to use custom modules, do this first:
 """
 
 __author__ = 'Monstre Charmant'
-__version__ = '1.2.2'
+__version__ = '1.2.3'
 __copyright__ = 'Copyright 2019-2020 Monstre Charmant'
 __license__ = 'MIT'
 __maintainer__ = __author__
@@ -21,6 +21,7 @@ __all__ = [
     'from_approximate_size',
     'insert_into_file',
     'get_or_update_config',
+    'password_generator',
 ]
 
 from .systools import (
@@ -29,4 +30,8 @@ from .systools import (
     from_approximate_size,
     insert_into_file,
     get_or_update_config,
+)
+
+from .secret_art import (
+    password_generator,
 )
