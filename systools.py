@@ -1,6 +1,6 @@
 import json
 from tempfile import TemporaryFile
-from shutil import copyfile
+from shutil import copyfileobj
 
 
 def safely_get_element(from_list, i) :
