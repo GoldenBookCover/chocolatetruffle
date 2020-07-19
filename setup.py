@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="chocolatetruffle", # Replace with your own username
-    version="1.0.0",
+    version="1.2.3",
     author="Monstre Charmant",
     author_email="ballonrage@gmail.com",
     description="Useful tool-kit",
