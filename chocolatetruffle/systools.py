@@ -76,6 +76,47 @@ def from_approximate_size(size: str) :
     raise ValueError('unrecognized unit')
 
 
+def delete_from_file(file: str, num: int, /, check_line=False, encoding_='utf-8') -> bool :
+    """Delete a line from a file
+
+    If the line number is greater than the total number of lines
+    in the given file, the line will not be deleted,
+    this may be what you what, or not.
+    If you don't what this, set check_line=True to check the line
+    number before insertion.
+
+    :param file: the file to delete a line from
+    :param num: the line number of the line that will be deleted
+    :param check_line: allow a greater line number than the total number of lines
+    :return: is_deleted: boolean
+    """
+
+    assert (num := int(num)) > 0, 'invalid line number'
+
+    is_deleted = False
+    with open(file, 'r+', encoding=encoding_) as f, \
+            TemporaryFile('w+t', encoding=encoding_) as ft :
+        
+        if check_line :
+            assert num <= len(f.readlines())
+            f.seek(0)
+
+        for i, line_ in enumerate(f) :
+            # Skip when line number matches
+            if i == num - 1 :
+                is_deleted = True
+                continue
+            ft.write(line_)
+        
+        # Should seek the start of files
+        f.seek(0)
+        f.truncate(0)
+        ft.seek(0)
+        copyfileobj(ft, f)
+
+    return is_deleted
+
+
 def insert_into_file(file: str, num: int, line: str, /, check_line=False, encoding_='utf-8') -> bool :
     """Insert a line into a file
 

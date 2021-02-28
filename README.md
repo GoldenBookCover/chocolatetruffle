@@ -2,6 +2,9 @@
 Useful tool-kit
 
 # Changelog
+## Version 1.3.0
+Add new function `delete_from_file`
+
 ## Version 1.2.2
 Update `insert_into_file`
 
