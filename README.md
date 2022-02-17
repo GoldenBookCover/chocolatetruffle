@@ -1,27 +1,35 @@
-# chocolatetruffle
+## chocolatetruffle
 Useful tool-kit
 
-# Changelog
-## Version 1.2.2
-Update `insert_into_file`
+## Changelog
+### Version 1.3.1
+- add setup.py
+- add `to_json` function
+- add `jprint` function
+- reformat some code
+- add more tests
 
-## Version 1.2.1
-`get_or_update_config` positional-only arguments
+### Version 1.2.3
+- Update `insert_into_file`
 
-`insert_into_file` positional-only arguments
+### Version 1.2.2
+- Update `insert_into_file`
 
-## Version 1.2.0
-**Python 3.8 required**
+### Version 1.2.1
+- `get_or_update_config` positional-only arguments
+- `insert_into_file` positional-only arguments
 
-Rename `retrive_or_update_config` to `get_or_update_config`
+### Version 1.2.0
+**Python 3.8 or above required**
 
-Add `from_approximate_size` function
+- Rename `retrive_or_update_config` to `get_or_update_config`.
+- Add `from_approximate_size` function.
+- Fix `insert_into_file` line number bug.
+- Add `_utest.py` test case.
 
-Fix `insert_into_file` line number bug
+### Version 1.1.0
+- Add `retrive_or_update_config` function
+- Fix `insert_into_file` encoding bug
 
-Add `_utest.py` test case
-
-## Version 1.1.0
-Add `retrive_or_update_config` function
-
-Fix `insert_into_file` encoding bug
+## Todo
+- Optimize `get_or_update_config` function
