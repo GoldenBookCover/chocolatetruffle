@@ -4,11 +4,11 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="chocolatetruffle", # Replace with your own username
-    version="1.2.3",
+    name="chocolatetruffle",
+    version="1.3.1",
     author="Monstre Charmant",
     author_email="ballonrage@gmail.com",
-    description="Useful tool-kit",
+    description="Useful sysadmin tool-kit",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/MonstreCharmant/chocolatetruffle",
